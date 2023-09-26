@@ -25,6 +25,8 @@ function EditProduct() {
 
   const editNewProduct = async (product) => {
     const response = await editProduct(product);
+    console.log(product);
+    console.log(response);
     if (response.success) {
       navigate("/");
     } else {
@@ -39,7 +41,7 @@ function EditProduct() {
       {errorMessage && <label className="errorMessage">{errorMessage}</label>}
       <AddEditProduct
         initialProduct={product}
-        saveButtonText="Update"
+        submitValueText="Update"
         saveProduct={editNewProduct}
       />
     </div>
