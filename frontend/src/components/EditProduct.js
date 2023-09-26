@@ -14,12 +14,12 @@ function EditProduct() {
 
   const getProductById = async () => {
     const res = await getProduct(productId);
-    if(res.success) {
+    if (res.success) {
       setProduct(res.data);
     }
-  }
+  };
 
-  useEffect(()=> {
+  useEffect(() => {
     getProductById();
   }, []);
 
@@ -33,15 +33,16 @@ function EditProduct() {
   };
 
   return (
-      <div className="user-form">
-        <h2>Edit Product</h2>
-        <hr />
-        {errorMessage && <label className="errorMessage">{errorMessage}</label>}
-        <AddEditProduct
-          initialProduct={product}
-          saveButtonText="Update"
-          saveProduct={editNewProduct}/>
-      </div>
+    <div className="user-form">
+      <h2>Edit Product</h2>
+      <hr />
+      {errorMessage && <label className="errorMessage">{errorMessage}</label>}
+      <AddEditProduct
+        initialProduct={product}
+        saveButtonText="Update"
+        saveProduct={editNewProduct}
+      />
+    </div>
   );
 }
 
