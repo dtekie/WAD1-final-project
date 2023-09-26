@@ -27,7 +27,7 @@ function AddProduct() {
       {errorMessage && <label className="errorMessage">{errorMessage}</label>}
       <AddEditProduct
         initialProduct={initialProduct}
-        submitValueText="Add"
+        submitValueText="Add New Product"
         saveProduct={addNewProduct}
       />
     </div>
