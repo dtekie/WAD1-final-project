@@ -1,6 +1,7 @@
 import React from "react";
 
 const Footer = () => {
+  console.log("Rendering Footer");
   return (
     <footer>
       <h3>&copy; 2023 MIU. All rights reserved.</h3>
@@ -9,10 +10,3 @@ const Footer = () => {
 };
 
 export default React.memo(Footer);
-// export default React.memo(function Footer() {
-//   return (
-//     <footer>
-//       <h3>&copy; 2023 MIU. All rights reserved.</h3>
-//     </footer>
-//   );
-// });
